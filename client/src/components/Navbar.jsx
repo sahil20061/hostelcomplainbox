@@ -25,17 +25,19 @@ export default function Navbar() {
 
   const studentLinks = [
     { to: '/student/dashboard', label: '📊 Dashboard' },
-    { to: '/student/complaints', label: '📋 My Complaints' },
-    { to: '/student/complaints/new', label: '➕ New Complaint' },
-    { to: '/student/mess-reviews', label: '⭐ Mess Reviews' },
-    { to: '/student/mess-reviews/new', label: '✍️ Review Mess' },
+    { to: '/student/payments', label: '💳 Pay Fees Online' },
+    { to: '/student/mess-menu', label: '🍲 Mess Menu' },
+    { to: '/student/complaints', label: '📋 Complaints' },
+    { to: '/student/mess-reviews', label: '⭐ Reviews' },
   ];
 
   const wardenLinks = [
     { to: '/warden/dashboard', label: '📊 Dashboard' },
+    { to: '/warden/payments', label: '💳 Fee Collections' },
+    { to: '/warden/mess-menu', label: '🍲 Edit Mess Menu' },
     { to: '/warden/complaints', label: '📋 Complaints' },
     { to: '/warden/budget', label: '💰 Budget' },
-    { to: '/warden/mess-reviews', label: '⭐ Mess Reviews' },
+    { to: '/warden/mess-reviews', label: '⭐ Reviews' },
     { to: '/warden/students', label: '👥 Students' },
   ];
 

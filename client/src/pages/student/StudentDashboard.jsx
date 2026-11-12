@@ -86,7 +86,33 @@ export default function StudentDashboard() {
       </div>
 
       {/* Quick Actions */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <Link
+          to="/student/payments"
+          className="card flex items-center gap-4 group hover:border-emerald-300 hover:bg-emerald-50/40"
+        >
+          <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-xl group-hover:bg-emerald-200 transition-colors">
+            💳
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900">Pay Fees Online</h3>
+            <p className="text-xs text-gray-500">Mess bill, room & dues</p>
+          </div>
+        </Link>
+
+        <Link
+          to="/student/mess-menu"
+          className="card flex items-center gap-4 group hover:border-indigo-300 hover:bg-indigo-50/40"
+        >
+          <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-xl group-hover:bg-indigo-200 transition-colors">
+            🍲
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900">Agle Din Ka Khana</h3>
+            <p className="text-xs text-gray-500">Tomorrow's mess menu</p>
+          </div>
+        </Link>
+
         <Link
           to="/student/complaints/new"
           className="card flex items-center gap-4 group hover:border-primary-200 hover:bg-primary-50/50"
@@ -96,11 +122,8 @@ export default function StudentDashboard() {
           </div>
           <div>
             <h3 className="font-semibold text-gray-900">New Complaint</h3>
-            <p className="text-sm text-gray-500">Report a hostel issue</p>
+            <p className="text-xs text-gray-500">Fan, window, pest, etc.</p>
           </div>
-          <svg className="w-5 h-5 text-gray-400 ml-auto group-hover:text-primary-500 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
         </Link>
 
         <Link
@@ -112,11 +135,8 @@ export default function StudentDashboard() {
           </div>
           <div>
             <h3 className="font-semibold text-gray-900">Review Mess Food</h3>
-            <p className="text-sm text-gray-500">Rate today's meals</p>
+            <p className="text-xs text-gray-500">Rate daily quality</p>
           </div>
-          <svg className="w-5 h-5 text-gray-400 ml-auto group-hover:text-amber-500 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
         </Link>
       </div>
 

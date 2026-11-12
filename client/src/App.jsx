@@ -11,11 +11,15 @@ import NewComplaint from './pages/student/NewComplaint';
 import MyComplaints from './pages/student/MyComplaints';
 import NewMessReview from './pages/student/NewMessReview';
 import MessReviews from './pages/student/MessReviews';
+import StudentPayments from './pages/student/StudentPayments';
+import MessMenuPage from './pages/student/MessMenuPage';
 import WardenDashboard from './pages/warden/WardenDashboard';
 import ManageComplaints from './pages/warden/ManageComplaints';
 import BudgetManager from './pages/warden/BudgetManager';
 import ViewMessReviews from './pages/warden/ViewMessReviews';
 import StudentDirectory from './pages/warden/StudentDirectory';
+import WardenPayments from './pages/warden/WardenPayments';
+import WardenMessMenu from './pages/warden/WardenMessMenu';
 
 export default function App() {
   const { loading } = useAuth();
@@ -42,6 +46,8 @@ export default function App() {
 
         {/* Student Routes */}
         <Route path="/student/dashboard" element={<ProtectedRoute role="student"><StudentDashboard /></ProtectedRoute>} />
+        <Route path="/student/payments" element={<ProtectedRoute role="student"><StudentPayments /></ProtectedRoute>} />
+        <Route path="/student/mess-menu" element={<ProtectedRoute role="student"><MessMenuPage /></ProtectedRoute>} />
         <Route path="/student/complaints" element={<ProtectedRoute role="student"><MyComplaints /></ProtectedRoute>} />
         <Route path="/student/complaints/new" element={<ProtectedRoute role="student"><NewComplaint /></ProtectedRoute>} />
         <Route path="/student/mess-reviews" element={<ProtectedRoute role="student"><MessReviews /></ProtectedRoute>} />
@@ -49,6 +55,8 @@ export default function App() {
 
         {/* Warden Routes */}
         <Route path="/warden/dashboard" element={<ProtectedRoute role="warden"><WardenDashboard /></ProtectedRoute>} />
+        <Route path="/warden/payments" element={<ProtectedRoute role="warden"><WardenPayments /></ProtectedRoute>} />
+        <Route path="/warden/mess-menu" element={<ProtectedRoute role="warden"><WardenMessMenu /></ProtectedRoute>} />
         <Route path="/warden/complaints" element={<ProtectedRoute role="warden"><ManageComplaints /></ProtectedRoute>} />
         <Route path="/warden/budget" element={<ProtectedRoute role="warden"><BudgetManager /></ProtectedRoute>} />
         <Route path="/warden/mess-reviews" element={<ProtectedRoute role="warden"><ViewMessReviews /></ProtectedRoute>} />

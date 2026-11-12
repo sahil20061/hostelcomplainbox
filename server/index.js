@@ -11,6 +11,8 @@ const complaintRoutes = require('./routes/complaints');
 const messRoutes = require('./routes/mess');
 const budgetRoutes = require('./routes/budget');
 const studentRoutes = require('./routes/students');
+const paymentRoutes = require('./routes/payments');
+const messMenuRoutes = require('./routes/messMenu');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -26,8 +28,10 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/complaints', complaintRoutes);
 app.use('/api/mess', messRoutes);
+app.use('/api/mess/menu', messMenuRoutes);
 app.use('/api/budget', budgetRoutes);
 app.use('/api/students', studentRoutes);
+app.use('/api/payments', paymentRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

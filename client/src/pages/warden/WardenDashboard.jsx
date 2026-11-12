@@ -321,6 +321,18 @@ export default function WardenDashboard() {
             </p>
             <div className="space-y-2">
               <Link
+                to="/warden/payments"
+                className="block text-center w-full py-2 bg-emerald-500/30 hover:bg-emerald-500/50 rounded-lg text-sm font-semibold transition-colors"
+              >
+                💳 Track Student Fee Collections
+              </Link>
+              <Link
+                to="/warden/mess-menu"
+                className="block text-center w-full py-2 bg-white/10 hover:bg-white/20 rounded-lg text-sm font-medium transition-colors"
+              >
+                🍲 Edit Mess Menu (Agle Din Ka Khana)
+              </Link>
+              <Link
                 to="/warden/complaints"
                 className="block text-center w-full py-2 bg-white/10 hover:bg-white/20 rounded-lg text-sm font-medium transition-colors"
               >
