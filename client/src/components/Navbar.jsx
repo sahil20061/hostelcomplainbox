@@ -80,7 +80,7 @@ export default function Navbar() {
               </div>
               <div className="hidden xl:block">
                 <p className="text-white text-xs font-medium leading-tight">{user?.name}</p>
-                <p className="text-primary-300 text-xs capitalize">{user?.role}{user?.roomNumber ? ` • Room ${user.roomNumber}` : ''}</p>
+                <p className="text-primary-300 text-xs capitalize">{user?.role}{(user?.room_no || user?.roomNumber) ? ` • Room ${user?.room_no || user?.roomNumber}` : ''}</p>
               </div>
             </div>
             <button
@@ -119,7 +119,7 @@ export default function Navbar() {
               </div>
               <div>
                 <p className="text-white font-medium text-sm">{user?.name}</p>
-                <p className="text-primary-300 text-xs capitalize">{user?.role}{user?.roomNumber ? ` • Room ${user.roomNumber}` : ''}</p>
+                <p className="text-primary-300 text-xs capitalize">{user?.role}{(user?.room_no || user?.roomNumber) ? ` • Room ${user?.room_no || user?.roomNumber}` : ''}</p>
               </div>
             </div>
             {links.map((link) => (

@@ -17,9 +17,9 @@ const messMenuRoutes = require('./routes/messMenu');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
+// Middleware - Allow all devices on local network (Phones, Tablets, Laptops, Mac, Linux)
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+  origin: true,
   credentials: true
 }));
 app.use(express.json());
